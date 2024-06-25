@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-const app = require("app");
+const app = require("./app");
 
 dotenv.config({ path: "./.env" });
 
