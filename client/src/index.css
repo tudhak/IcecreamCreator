@@ -1,5 +1,6 @@
 /* Importing fonts */
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
 
 /* Tailwind configuration */
 @tailwind base;
@@ -9,6 +10,12 @@
 /* Font styles */
 .pacifico-regular {
   font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cookie-regular {
+  font-family: "Cookie", cursive;
   font-weight: 400;
   font-style: normal;
 }
