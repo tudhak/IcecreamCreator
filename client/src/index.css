@@ -1,6 +1,11 @@
 /* Importing fonts */
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
+/* Tailwind configuration */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Font styles */
 .pacifico-regular {
   font-family: "Pacifico", cursive;
@@ -11,10 +16,9 @@
 /* Global variables */
 :root {
   --main-green: #93dcb6;
-  --alt-green: #84ddaa;
+  /* --alt-green: #84ddaa;
   --main-pink: #d53e78;
-  --alt-pink: #dd5490;
-  --main-white: #fff;
+  --alt-pink: #dd5490; */
 }
 
 /* Global */
@@ -38,13 +42,3 @@ body {
 }
 
 /* Page components */
-.main-title {
-  font-size: 4rem;
-  color: var(--main-pink);
-}
-
-.main-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
