@@ -1,9 +1,10 @@
 import "./index.css";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="main-header">
-      <h1 className="pacifico-regular main-title">Icecream Creator</h1>
+    <div>
+      <Header />
     </div>
   );
 }
