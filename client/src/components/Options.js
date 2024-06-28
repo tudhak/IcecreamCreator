@@ -1,13 +1,16 @@
-import { useState } from "react";
 import { useEffect } from "react";
 import Flavor from "./Flavor";
 
-export default function Options() {
-  const [container, setContainer] = useState("Tub");
-  const [scoops, setScoops] = useState(1);
-  const [flavors, setFlavors] = useState(["Chocolate"]);
-  const [topping, setTopping] = useState("Caramel");
-
+export default function Options({
+  container,
+  setContainer,
+  scoops,
+  setScoops,
+  flavors,
+  setFlavors,
+  topping,
+  setTopping,
+}) {
   function handleFlavorChange(flavor, index) {
     let newFlavors = [...flavors];
     newFlavors[index] = flavor;
