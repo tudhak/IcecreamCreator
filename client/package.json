@@ -16,6 +16,14 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "overrides": {
+    "resolve-url-loader": {
+      "postcss": "^8.4.38"
+    },
+    "css-select": {
+      "nth-check": "^2.1.1"
+    }
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
