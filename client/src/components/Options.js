@@ -28,7 +28,7 @@ export default function Options() {
   }, [scoops]);
 
   return (
-    <div className="bg-white rounded-md shadow-md w-4/5 p-5">
+    <div className="bg-white rounded-md shadow-md w-4/5 max-w-2xl p-5">
       <h2 className="text-3xl pacifico-regular text-center mb-10">Options</h2>
       <div className="flex justify-center items-center gap-10 mb-5">
         <label className="w-24 cookie-regular text-2xl text-center">
