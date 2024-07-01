@@ -60,7 +60,7 @@ export default function Options({
           <option>3</option>
         </select>
       </div>
-      {Array.from({ length: scoops }, (_, ind) => ind + 1).map((e, i) => (
+      {Array.from({ length: scoops }, (_, i) => (
         <Flavor
           key={i + 1}
           index={i}
