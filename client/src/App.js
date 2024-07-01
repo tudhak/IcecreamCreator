@@ -3,6 +3,7 @@ import "./index.css";
 import Header from "./components/Header";
 import Options from "./components/Options";
 import Preview from "./components/Preview";
+import PageContainer from "./components/PageContainer";
 
 function App() {
   const [container, setContainer] = useState("Tub");
@@ -11,7 +12,7 @@ function App() {
   const [topping, setTopping] = useState("Caramel");
 
   return (
-    <div className="flex flex-col gap-10 justify-center items-center">
+    <PageContainer>
       <Header />
       <Options
         container={container}
@@ -29,7 +30,7 @@ function App() {
         flavors={flavors}
         topping={topping}
       />
-    </div>
+    </PageContainer>
   );
 }
 
