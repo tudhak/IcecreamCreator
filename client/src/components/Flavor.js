@@ -1,4 +1,4 @@
-export default function Flavor({ index, flavors, setFlavors, onFlavorChange }) {
+export default function Flavor({ index, features, onFlavorChange }) {
   return (
     <div className="flex justify-center items-center gap-10 mb-5">
       <label className="w-24 cookie-regular text-2xl text-center">
@@ -6,7 +6,7 @@ export default function Flavor({ index, flavors, setFlavors, onFlavorChange }) {
       </label>
       <select
         className="border border-black w-40"
-        value={flavors}
+        value={features.flavors[index]}
         onChange={(e) => onFlavorChange(e.target.value, index)}
       >
         <option>Chocolate</option>
