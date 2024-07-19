@@ -46,7 +46,9 @@ export default function Options({ features, setFeatures }) {
         <select
           className="border border-black w-40"
           value={features.scoops}
-          onChange={(e) => setFeatures({ ...features, scoops: e.target.value })}
+          onChange={(e) =>
+            setFeatures({ ...features, scoops: Number(e.target.value) })
+          }
         >
           <option>1</option>
           <option>2</option>
