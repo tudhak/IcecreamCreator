@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Flavor from "./Flavor";
 
 export default function Options({ features, setFeatures }) {
