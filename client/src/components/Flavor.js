@@ -15,7 +15,7 @@ export default function Flavor({ index, features, onFlavorChange }) {
         <option>Cherry</option>
         <option>Stracciatella</option>
         <option>Lemon</option>
-        <option>Amarena</option>
+        <option>Peppermint</option>
         <option>Raspberry</option>
         <option>Bubblegum</option>
         <option>Nocciola</option>
