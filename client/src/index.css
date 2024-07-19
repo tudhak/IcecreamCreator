@@ -49,3 +49,19 @@ body {
 }
 
 /* Page components */
+
+.scoops-2-left {
+  left: 46%;
+}
+
+.scoops-2-right {
+  right: 46%;
+}
+
+.scoops-3 {
+  right: 43.5%;
+}
+
+.scoops-3-top-tub {
+  top: -64px;
+}
