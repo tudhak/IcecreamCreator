@@ -1,3 +1,5 @@
+import scoopColor from "../Functions/scoopColor";
+
 export default function Preview({ features }) {
   return (
     <div className="bg-white rounded-md shadow-md w-4/5 max-w-2xl p-5 pb-10">
@@ -16,7 +18,7 @@ export default function Preview({ features }) {
           <div
             className={`w-20 h-20 rounded-full bg-red-800 absolute ${
               features.container === "Cone" ? "-top-14" : "-top-10"
-            }`}
+            } ${scoopColor(1, features.flavors)}`}
           ></div>
         )}
         {features.scoops === 2 && (
@@ -24,12 +26,12 @@ export default function Preview({ features }) {
             <div
               className={`w-20 h-20 rounded-full bg-red-800 absolute scoops-2-left ${
                 features.container === "Cone" ? "-top-16" : "-top-10"
-              }`}
+              } ${scoopColor(1, features.flavors)}`}
             ></div>
             <div
               className={`w-20 h-20 rounded-full bg-blue-800 absolute scoops-2-right z-30 ${
                 features.container === "Cone" ? "-top-16" : "-top-10"
-              }`}
+              } ${scoopColor(2, features.flavors)}`}
             ></div>
           </>
         )}
@@ -38,17 +40,17 @@ export default function Preview({ features }) {
             <div
               className={`w-20 h-20 rounded-full bg-red-800 absolute scoops-2-left ${
                 features.container === "Cone" ? "-top-16" : "-top-10 z-20"
-              }`}
+              } ${scoopColor(1, features.flavors)}`}
             ></div>
             <div
               className={`w-20 h-20 rounded-full bg-blue-800 absolute scoops-2-right z-30 ${
                 features.container === "Cone" ? "-top-16" : "-top-10"
-              }`}
+              } ${scoopColor(2, features.flavors)}`}
             ></div>
             <div
               className={`w-20 h-20 rounded-full bg-yellow-800 absolute scoops-3 z-10 ${
                 features.container === "Cone" ? "-top-24" : "scoops-3-top-tub"
-              }`}
+              } ${scoopColor(3, features.flavors)}`}
             ></div>
           </>
         )}
