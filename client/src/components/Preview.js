@@ -16,7 +16,7 @@ export default function Preview({ features }) {
         )}
         {features.scoops === 1 && (
           <div
-            className={`w-20 h-20 rounded-full bg-red-800 absolute ${
+            className={`w-20 h-20 rounded-full absolute ${
               features.container === "Cone" ? "-top-14" : "-top-10"
             } ${scoopColor(1, features.flavors)}`}
           ></div>
@@ -24,12 +24,12 @@ export default function Preview({ features }) {
         {features.scoops === 2 && (
           <>
             <div
-              className={`w-20 h-20 rounded-full bg-red-800 absolute scoops-2-left ${
+              className={`w-20 h-20 rounded-full absolute scoops-2-left ${
                 features.container === "Cone" ? "-top-16" : "-top-10"
               } ${scoopColor(1, features.flavors)}`}
             ></div>
             <div
-              className={`w-20 h-20 rounded-full bg-blue-800 absolute scoops-2-right z-30 ${
+              className={`w-20 h-20 rounded-full absolute scoops-2-right z-30 ${
                 features.container === "Cone" ? "-top-16" : "-top-10"
               } ${scoopColor(2, features.flavors)}`}
             ></div>
@@ -38,17 +38,17 @@ export default function Preview({ features }) {
         {features.scoops === 3 && (
           <>
             <div
-              className={`w-20 h-20 rounded-full bg-red-800 absolute scoops-2-left ${
+              className={`w-20 h-20 rounded-full absolute scoops-2-left ${
                 features.container === "Cone" ? "-top-16" : "-top-10 z-20"
               } ${scoopColor(1, features.flavors)}`}
             ></div>
             <div
-              className={`w-20 h-20 rounded-full bg-blue-800 absolute scoops-2-right z-30 ${
+              className={`w-20 h-20 rounded-full absolute scoops-2-right z-30 ${
                 features.container === "Cone" ? "-top-16" : "-top-10"
               } ${scoopColor(2, features.flavors)}`}
             ></div>
             <div
-              className={`w-20 h-20 rounded-full bg-yellow-800 absolute scoops-3 z-10 ${
+              className={`w-20 h-20 rounded-full absolute scoops-3 z-10 ${
                 features.container === "Cone" ? "-top-24" : "scoops-3-top-tub"
               } ${scoopColor(3, features.flavors)}`}
             ></div>
