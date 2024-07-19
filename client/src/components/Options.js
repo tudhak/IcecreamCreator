@@ -9,17 +9,18 @@ export default function Options({ features, setFeatures }) {
   }
 
   // The idea is to make the flavors state variable (an array) the same length as the number of scoops
-  // The effect is triggered as soon as we update the scoops variable
   // A shallow copy of the flavors array is created, its length is set to the scoops state
   // If we increase the number of scoops, the array is populated with empty elements
   // The findLastIndex method will find the last truthy value in the array and we fill empty values with the starting value "Chocolate"
-  useEffect(() => {
+  // Updating both flavors and scoops when updating the scoops instead of a useEffect (better practice)
+
+  function updateScoopsAndFlavors(numberOfScoops) {
     let newFlavors = [...features.flavors];
-    newFlavors.length = features.scoops;
+    newFlavors.length = numberOfScoops;
     const lastTruthyValue = newFlavors.findLastIndex((el) => el);
     newFlavors.fill("Chocolate", lastTruthyValue + 1);
-    setFeatures({ ...features, flavors: newFlavors });
-  }, [features.scoops, setFeatures]);
+    setFeatures({ ...features, flavors: newFlavors, scoops: numberOfScoops });
+  }
 
   return (
     <div className="bg-white rounded-md shadow-md w-4/5 max-w-2xl p-5">
@@ -46,9 +47,7 @@ export default function Options({ features, setFeatures }) {
         <select
           className="border border-black w-40"
           value={features.scoops}
-          onChange={(e) =>
-            setFeatures({ ...features, scoops: Number(e.target.value) })
-          }
+          onChange={(e) => updateScoopsAndFlavors(Number(e.target.value))}
         >
           <option>1</option>
           <option>2</option>
