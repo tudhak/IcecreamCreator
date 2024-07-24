@@ -21,6 +21,9 @@ export default function Flavor({ index, features, onFlavorChange }) {
         <option>Nocciola</option>
         <option>Pistachio</option>
         <option>Banana</option>
+        <option>Matcha</option>
+        <option>Carrot</option>
+        <option>Blue Moon</option>
       </select>
     </div>
   );

@@ -7,7 +7,7 @@ export default function scoopColor(scoopNumber, flavors) {
     case "Mango":
       return "bg-yellow-500";
     case "Cherry":
-      return "bg-rose-950";
+      return "bg-rose-600";
     case "Stracciatella":
       return "bg-neutral-200";
     case "Lemon":
@@ -21,9 +21,15 @@ export default function scoopColor(scoopNumber, flavors) {
     case "Nocciola":
       return "bg-amber-900";
     case "Pistachio":
-      return "bg-lime-900";
+      return "bg-lime-300";
     case "Banana":
       return "bg-amber-200";
+    case "Matcha":
+      return "bg-lime-500";
+    case "Carrot":
+      return "bg-orange-500";
+    case "Blue Moon":
+      return "bg-sky-600";
     default:
       return "bg-slate-500";
   }
