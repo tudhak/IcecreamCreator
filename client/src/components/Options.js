@@ -1,5 +1,7 @@
 import Flavor from "./Flavor";
 
+import { Label, Select } from "flowbite-react";
+
 export default function Options({ features, setFeatures }) {
   function handleFlavorChange(flavor, index) {
     let newFlavors = [...features.flavors];
@@ -25,11 +27,12 @@ export default function Options({ features, setFeatures }) {
     <div className="bg-white rounded-md shadow-md w-4/5 max-w-2xl p-5">
       <h2 className="text-3xl pacifico-regular text-center mb-10">Options</h2>
       <div className="flex justify-center items-center gap-10 mb-5">
-        <label className="w-24 cookie-regular text-2xl text-center">
-          Container
-        </label>
-        <select
-          className="border border-black w-40"
+        <Label
+          className="w-24 cookie-regular text-2xl text-center"
+          value="Container"
+        />
+        <Select
+          className="w-40"
           value={features.container}
           onChange={(e) =>
             setFeatures({ ...features, container: e.target.value })
@@ -37,21 +40,22 @@ export default function Options({ features, setFeatures }) {
         >
           <option>Tub</option>
           <option>Cone</option>
-        </select>
+        </Select>
       </div>
       <div className="flex justify-center items-center gap-10 mb-5">
-        <label className="w-24 cookie-regular text-2xl text-center">
-          Scoops
-        </label>
-        <select
-          className="border border-black w-40"
+        <Label
+          className="w-24 cookie-regular text-2xl text-center"
+          value="Scoops"
+        />
+        <Select
+          className="w-40"
           value={features.scoops}
           onChange={(e) => updateScoopsAndFlavors(Number(e.target.value))}
         >
           <option>1</option>
           <option>2</option>
           <option>3</option>
-        </select>
+        </Select>
       </div>
       {Array.from({ length: features.scoops }, (_, i) => (
         <Flavor
@@ -62,11 +66,11 @@ export default function Options({ features, setFeatures }) {
         />
       ))}
       <div className="flex justify-center items-center gap-10 mb-5">
-        <label className="w-24 cookie-regular text-2xl text-center">
+        <Label className="w-24 cookie-regular text-2xl text-center">
           Topping
-        </label>
-        <select
-          className="border border-black w-40"
+        </Label>
+        <Select
+          className="w-40"
           value={features.topping}
           onChange={(e) =>
             setFeatures({ ...features, topping: e.target.value })
@@ -76,7 +80,7 @@ export default function Options({ features, setFeatures }) {
           <option>Strawberry sauce</option>
           <option>Chocolate chips</option>
           <option>Peanut chips</option>
-        </select>
+        </Select>
       </div>
     </div>
   );

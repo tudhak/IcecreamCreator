@@ -1,11 +1,13 @@
+import { Label, Select } from "flowbite-react";
+
 export default function Flavor({ index, features, onFlavorChange }) {
   return (
     <div className="flex justify-center items-center gap-10 mb-5">
-      <label className="w-24 cookie-regular text-2xl text-center">
+      <Label className="w-24 cookie-regular text-2xl text-center">
         Flavor {index + 1}
-      </label>
-      <select
-        className="border border-black w-40"
+      </Label>
+      <Select
+        className="w-40"
         value={features.flavors[index]}
         onChange={(e) => onFlavorChange(e.target.value, index)}
       >
@@ -24,7 +26,7 @@ export default function Flavor({ index, features, onFlavorChange }) {
         <option>Matcha</option>
         <option>Carrot</option>
         <option>Blue Moon</option>
-      </select>
+      </Select>
     </div>
   );
 }
