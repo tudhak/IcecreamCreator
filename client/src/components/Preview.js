@@ -1,6 +1,7 @@
 import scoopColor from "../Functions/scoopColor";
 import ChocolateChips from "./ChocolateChips";
 import PeanutChips from "./PeanutChips";
+import StrawberrySauce from "./StrawberrySauce";
 
 export default function Preview({ features }) {
   return (
@@ -58,6 +59,7 @@ export default function Preview({ features }) {
         )}
         <ChocolateChips features={features} />
         <PeanutChips features={features} />
+        <StrawberrySauce features={features} />
       </div>
     </div>
   );

@@ -93,3 +93,30 @@ body {
 .center-chip {
   left: 49%;
 }
+
+.sauce {
+  --s: 12px;
+  --b: 6px;
+  --m: 0.4;
+
+  --R: calc(var(--s) * sqrt(var(--m) * var(--m) + 1) + var(--b) / 2);
+  width: calc(2 * var(--R));
+  min-height: 80px;
+  --_g: #0000 calc(99% - var(--b)), #000 calc(101% - var(--b)) 99%, #0000 101%;
+  mask: radial-gradient(
+        var(--R) at top 50% right calc(-1 * var(--m) * var(--s)),
+        var(--_g)
+      )
+      calc(50% - var(--s) / 2 - var(--b) / 2) calc(50% - 2 * var(--s)) /
+      calc(var(--s) + var(--b)) calc(4 * var(--s)) repeat-y,
+    radial-gradient(
+        var(--R) at top 50% left calc(-1 * var(--m) * var(--s)),
+        var(--_g)
+      )
+      calc(50% + var(--s) / 2 + var(--b) / 2) 50% / calc(var(--s) + var(--b))
+      calc(4 * var(--s)) repeat-y;
+}
+
+.mini-length-sauce {
+  min-height: 50px;
+}
